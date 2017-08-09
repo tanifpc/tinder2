@@ -6,7 +6,6 @@ $('.primeiro').click(function(){
     $('#Primeirotitulo').hide();
 });
 
-
 function Queue(){ 
     this.data = [];
     this.enqueue = function(element){ 
@@ -23,8 +22,7 @@ function Library(){
     this.livros = new Queue();
     this.livrosViewed = new Queue();
     this.actualLivro = null;
-    
-                                                 
+                                     
     this.addLivro = function (livro){                    
         this.livros.enqueue(livro); 
     }
@@ -41,35 +39,44 @@ function Library(){
 
     this.nextLivro = function(){
         this.actualLivro = this.livros.dequeue(); 
-        this.actualLivro.render();
-        this.livrosViewed.enqueue(this.actualLivro);
+        if (this.actualLivro == undefined){
+            $('#mainPage').hide();
+            $("#endPage").show();
+            this.calcular(); 
+            $('body').attr('class', 'end-page');
+            
+        }
+        else{
+             this.livrosViewed.enqueue(this.actualLivro);
+             this.actualLivro.render();
+        }
     } 
 
     this.calcular = function (){  
         var tlikes = 0;
         var tdislikes= 0;
         var sim = this.livrosViewed.dequeue();
-        while (sim != null){
+        while (sim != undefined){
             tlikes += sim.likes;
             tdislikes += sim.dislikes;
 
-    //         var html = "<tr>";
-    //         html += "<td>";
-    //         html += livro.title;
-    //         html += "</td>";
-    //         html += "<td>";
-    //         html += livro.likes;
-    //         html += "</td>";
-    //         html += "<td>";
-    //         html += livro.dislikes;
-    //         html += "</td>";
-    //         html += "</tr>";
-    //         $('#tbody').append(html);
-    //     }
-    //     $("#likesLabel").text(tlikes);
-    //     $("#dislikesLabel").text(tdislikes);
-    // 
+            var html = "<tr>";
+            html += "<td>";
+            html += sim.title;
+            html += "</td>";
+            html += "<td>";
+            html += sim.likes;
+            html += "</td>";
+            html += "<td>";
+            html += sim.dislikes;
+            html += "</td>";
+            html += "</tr>";
+            $('#tabela').append(html);
+
+            sim = this.livrosViewed.dequeue();
         }
+        $("#likesLabel").html(tlikes);
+        $("#dislikesLabel").html(tdislikes);
     }
 }
 
@@ -100,29 +107,18 @@ var livro3 = new Livro ("Uma Fortuna Perigosa","http://1.bp.blogspot.com/-Pc5zUw
 var library = new Library();                        
     library.addLivro(livro1);                        
     library.addLivro(livro2);
-    library.addLivro(livro3);
-                     
-
+    library.addLivro(livro3);             
 
 $('#buttonLike').click(function(){
     library.gostar();
-    if (library.livrosViewed.dequeue() ==undefined) {    
-        $('#mainPage').hide();
-        $("#endPage").show();
-        library.calcular();
-    }
 });
 
 $('#buttonDislike').click(function(){
     library.naogostar(); 
-    if (library.livrosViewed.dequeue() ==undefined) {
-        $('#mainPage').hide();
-        $("#endPage").show();
-        library.calcular();
-    }
 });
 
  library.nextLivro();
+
 
 
 

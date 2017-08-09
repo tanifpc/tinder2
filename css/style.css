@@ -5,14 +5,21 @@ border: 3px dotted goldenrod;
 background-clip: padding-box;
 height: auto;
 text-align: center;
+
 }
 .active {
 display: block;
 text-align: center;
 }
-body{
+body.inicial-page{
     text-align: center;
     background-image: url("http://wild-about-travel.com/wp-content/uploads/2014/10/SIladen-Sunset-Wallpaper-2880x1800.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+body.end-page{
+    background-image: url("http://www.climatechangenews.com/files/2016/03/great-barrier-reef.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
