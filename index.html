@@ -8,18 +8,23 @@
 </head>
 
 <body class="inicial-page">
-    <h1 id="Primeirotitulo"> Bem vindo </h1>
+
     <div class="container-fluid">
         <div id="startPage" class="row">
-            <div class="primeiro col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-1">
+            <h1 id="Primeirotitulo"> Bem vindo </h1>
+
+            <div class="primeiro col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-2">
+
                 <button id="inicial" class="btn btn-primary"> click me! </button>
             </div>
         </div>
 
         <div id="mainPage">
             <div id="bookContainer" class="row">
-                <h1>Ken Follet </h1>
-                <div class="livro active col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-1">
+                
+             <!--   <div class="livro col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-1"> -->
+                    <div class="livro col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-2">
+                  
                     <img id="img" src="" height="300">
                     <h2 id="title">
                         <u>Livro 1</u>
@@ -27,18 +32,18 @@
                     <p id="descricao">Descricao</p>
                     <p class="p1 text-info"> </p>
 
-                    <ul>
-                        <li><a id="linkEditora1" href="" target="_blank">link1</a></li>
-                        <li><a id="linkEditora2" href="" target="_blank">link2 </a></li>
-                    </ul>
-                </div>
 
-                <button id="buttonLike" data-Opinion="Like" class="ylike btn btn-info">    
+                    <li><a id="linkEditora1" href="" target="_blank">link1</a></li>
+                </div>
+                <!--    -->
+            </div>
+            <button id="buttonLike" data-Opinion="Like" class="ylike btn btn-info">    
                 <span class="glyphicon glyphicon-ok"></span> Gosto</button>
 
-                <button id="buttonDislike" data-Opinion="Dislike" class="nlike btn btn-primary">
+            <button id="buttonDislike" data-Opinion="Dislike" class="nlike btn btn-primary">
                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Não gosto</button>
-            </div>
+
+
         </div>
 
         <div id="endPage" class="row">
@@ -63,6 +68,7 @@
 
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery-3.2.1.js"></script>
     <script type="text/javascript" src="script.js"></script>
 

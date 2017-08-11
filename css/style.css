@@ -1,16 +1,13 @@
 .livro {
-    display: none;
+display: block;
 background-color: peachpuff;
 border: 3px dotted goldenrod;
 background-clip: padding-box;
-height: auto;
-text-align: center;
+margin-top: 10%;
+margin-left: 33%;
+}
 
-}
-.active {
-display: block;
-text-align: center;
-}
+
 body.inicial-page{
     text-align: center;
     background-image: url("http://wild-about-travel.com/wp-content/uploads/2014/10/SIladen-Sunset-Wallpaper-2880x1800.jpg");
@@ -56,29 +53,32 @@ p{
 .nlike{
     width: 100px;
     height: 40px;
+    text-align:center;
 }
 .ylike{
     width: 100px;
     height: 40px;
+
+    
 }
 img {
     opacity: 0.6;
     filter: alpha(opacity=60);
 }
-ul {
-    text-align: justify;
-    height: auto;
-}
+
 #mainPage{
     display:none;
+    text-align:center;
+
 }
+
 #endPage{
     display:none;
     font-size: 15px;
 }
 #Primeirotitulo{
     color:teal;
-     font: italic 70px Georgia, serif;
+    font: italic 70px Georgia, serif;
 }
 #inicial{ 
     position: absolute;
