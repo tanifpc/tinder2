@@ -1,12 +1,19 @@
 .livro {
 display: block;
-background-color: peachpuff;
+background-color: moccasin;
 border: 3px dotted goldenrod;
 background-clip: padding-box;
 margin-top: 10%;
 margin-left: 33%;
+
 }
 
+body.first-page{
+    text-align: center;
+    background-image: url("https://i.ytimg.com/vi/k3zq7itoqKU/maxresdefault.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
 body.inicial-page{
     text-align: center;
@@ -16,7 +23,7 @@ body.inicial-page{
 
 }
 body.end-page{
-    background-image: url("http://www.climatechangenews.com/files/2016/03/great-barrier-reef.jpg");
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/87/f0/f8/87f0f81fbd571805f981de8ce4dac470.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -75,6 +82,7 @@ img {
 #endPage{
     display:none;
     font-size: 15px;
+    text-align:left;
 }
 #Primeirotitulo{
     color:teal;
@@ -93,29 +101,33 @@ img {
     left: 50%;
     margin-left: -100px;
     background-color: Transparent;
+    width:100px;
+    height:100px;    
+    background: transparent url(http://winnerhun.uw.hu/rozsa2.gif) no-repeat center center;  
 }
-#fim{
-    position: absolute;
-    top: 50%;
-    font: italic 50px Georgia, serif;
-    left: 50%;
-    font-size: 30px;
-    border: 3px solid teal;;
-}
+
+
+
+
 table{
     border: 5px solid teal;;
     position: absolute;
-    top: 50%;
+    top: 10%;
     font: italic bold 19px Georgia, serif;
-    left: 50%;
+    left: 35%;
     font-size: 15px;
 }
 table,td,tr{
     text-align:center;
     width:200px; 
-    border: 3px solid teal;;
+    border: 1px solid olivedrab;
 }
-#mar{
-    display:inline;
-    font-size: 20px;
+
+
+.ending {
+display: block;
+background-color: transparent;
+background-clip: padding-box;
+margin-top: 10%;
+margin-left: 33%;
 }

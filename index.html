@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="inicial-page">
+<body class="first-page">
 
     <div class="container-fluid">
         <div id="startPage" class="row">
-            <h1 id="Primeirotitulo"> Bem vindo </h1>
+            <h1 id="Primeirotitulo"> Welcome </h1>
 
             <div class="primeiro col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-2">
 
-                <button id="inicial" class="btn btn-primary"> click me! </button>
+                <button id="inicial" class="btn btn-primary">   </button>
             </div>
         </div>
 
-        <div id="mainPage">
+        <div id="mainPage" class="inicial-page">
             <div id="bookContainer" class="row">
-                
-             <!--   <div class="livro col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-1"> -->
-                    <div class="livro col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-2">
-                  
+
+                <!--   <div class="livro col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-1"> -->
+                <div class="livro col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-2">
+
                     <img id="img" src="" height="300">
                     <h2 id="title">
                         <u>Livro 1</u>
@@ -38,32 +38,32 @@
                 <!--    -->
             </div>
             <button id="buttonLike" data-Opinion="Like" class="ylike btn btn-info">    
-                <span class="glyphicon glyphicon-ok"></span> Gosto</button>
+                <span class="glyphicon glyphicon-ok"></span> Yes</button>
 
             <button id="buttonDislike" data-Opinion="Dislike" class="nlike btn btn-primary">
-                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Não gosto</button>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No</button>
 
 
         </div>
 
         <div id="endPage" class="row">
-            <h3 id="titulo"> Fim da lista de livros</h3>
+            <h3 id="titulo"> The End </h3>
+            <div class=" ending col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-2">
+                <label id="mar">Likes</label>: <a id="likesLabel">0 </a><br>
+                <label id="mar">Dislikes</label>: <a id="dislikesLabel">0 </a><br>
 
-            <table id="tabelaResult">
-                <thead>
-                    <tr>
-                        <td>Nome do livro</td>
-                        <td>Gostos</td>
-                        <td>Não Gostos</td>
-                    </tr>
-                </thead>
-                <tbody id="tabela">
-                </tbody>
-            </table>
-
-            <label id="mar">Likes</label>: <a id="likesLabel">0 </a><br>
-            <label id="mar">Dislikes</label>: <a id="dislikesLabel">0 </a>
-
+                <table id="tabelaResult">
+                    <thead>
+                        <tr>
+                            <td>Name of the book</td>
+                            <td>Likes</td>
+                            <td>Dislikes</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela">
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
