@@ -98,36 +98,17 @@ function Livro (title,img,descricao,linkEditora1){
 
 var library = null;
 function init(paramPesquisa) {
-    var url = "https://www.googleapis.com/books/v1/volumes?q=" + encodeURI(paramPesquisa) + "&maxResults=40"+ "&startIndex=10";
+    var url = "https://www.googleapis.com/books/v1/volumes?q=" + encodeURI(paramPesquisa)+"&maxResults=10&startIndex=1";
     //https://productforums.google.com/forum/#!topic/books-api/z_kbN_Cu_9Y;context-place=topicsearchin/books-api/authorid$3AAPn2wQepP2XxT7tZ6K0WOrL2kayXJTTKuMMZqr6D5bzOPOcWK-vVL5ptiBPQW1oGUFCkPs0DZIzs%7Csort:date%7Cspell:false
     //link: possibilidade de por mais de 10items
     $.get(url).done(function (data) {
         library = new Library();
         for (var i = 0; i < data.items.length; i++) {
             var livrodoGoogle = data.items[i];
-            var title = livrodoGoogle.volumeInfo.title;
-            var description = livrodoGoogle.volumeInfo.description;
-            var img = livrodoGoogle.volumeInfo.imageLinks != null ? livrodoGoogle.volumeInfo.imageLinks.thumbnail : "error" ;
-            //por link em vez de erro!
-            //fazer para o resto
-            
-            // img.onerror = function () { 
-            //     this.style.display = "none";
-            // }
-
-            // if (var img != null){
-            //     var img = livrodoGoogle.volumeInfo.imageLinks.thumbnail;
-            // }
-            // else{
-            //      var img = "error";
-            // }
-            // $('img').error(function () { 
-            //     $(this).hide(); 
-            // });
-            var linkEditora1 = livrodoGoogle.volumeInfo.previewLink;
-
-           
-
+            var title = livrodoGoogle.volumeInfo.title != null ? livrodoGoogle.volumeInfo.title: "ups";
+            var img = livrodoGoogle.volumeInfo.imageLinks != null ? livrodoGoogle.volumeInfo.imageLinks.thumbnail : "http://demo.vdiscovery.org/aum/images/no-image.png";
+            var description = livrodoGoogle.volumeInfo.description != null ? livrodoGoogle.volumeInfo.description: "ups";
+            var linkEditora1 = livrodoGoogle.volumeInfo.previewLink != null ? livrodoGoogle.volumeInfo.previewLink: "ups";                
             var livro = new Livro(title, img, description, linkEditora1);
             library.addLivro(livro);
 
